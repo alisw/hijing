@@ -19,7 +19,7 @@ project(hijing Fortran)
 
 include_directories(.)
 
-file(GLOB SOURCES "*.F")
+file(GLOB SOURCES "*.F" "hipyset/*.F")
 
 add_library(HIJING SHARED ${SOURCES})
 
