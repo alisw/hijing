@@ -23,6 +23,9 @@ file(GLOB SOURCES "*.F" "hipyset/*.F")
 
 add_library(HIJING SHARED ${SOURCES})
 
+# Installation
+install(TARGETS HIJING LIBRARY DESTINATION lib)
+
 if(${CMAKE_SYSTEM} MATCHES Darwin)
     set_target_properties(HIJING PROPERTIES LINK_FLAGS "-undefined dynamic_lookup")
 endif(${CMAKE_SYSTEM} MATCHES Darwin)
